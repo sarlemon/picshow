@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轮播图</title>
+<style>
+	body,div,ul,li,a,img{margin:0; padding:0;}
+	ul,li{list-style:none;}
+	a{text-decoration:none;}
+	.wrapper{position:relative; margin:30px auto; width:1130px; height:500px; overflow:hidden;}
+	.banner{width:1130px; height:500px; overflow:hidden;}
+	.imgList{width:1130px; height:500px; z-index:10;}
+	.imgList li{display:none;}
+	.imgList .imgOn{display:inline;}
+	.bg{position:absolute; bottom:0; width:1130px; height:60px; z-index:20; opacity:0; filter:alpha(opacity=0); background:black;}
+	.infoList{position:absolute; left:10px; bottom:20px; z-index:30; display:none;}
+	.infoList li{display:none;}
+	.infoList .infoOn{display:inline; color:white;}
+	.indexList{position:absolute; right:10px; bottom:15px; z-index:30;}
+	.indexList li{width:15px; height:15px; float:left; margin-right:5px; padding:4px 4px; border:2px solid black; background:gray; cursor:pointer; border-radius:50%; text-align:center;}
+	.indexList .indexOn{background: #FFF;font-weight: bold;color: black;}
+</style>
+</head>
+
+<body>
+	<div class="wrapper"><!--最外层部分-->
+    	<div class="banner"><!--轮播部分-->
+        	<ul class="imgList">
+            	<li class="imgOn"><a href="#"><img src="img/a1.jpg" alt="puss in boots1"></a></li>
+            	<li><a href="#"><img src="img/a2.jpg" alt="puss in boots2"></a></li>
+            	<li><a href="#"><img src="img/a3.jpg" alt="puss in boots3"></a></li>
+            	<li><a href="#"><img src="img/a4.jpg" alt="puss in boots4"></a></li>
+            	<li><a href="#"><img src="img/a5.jpg" alt="puss in boots5"></a></li>
+            </ul>
+            <div class="bg"></div><!--图片底部背景层部分-->
+            <ul class="infoList"><!--图片左下角文字信息部分-->
+				<li class="infoOn">puss in boots1</li>
+				<li>puss in boots2</li>
+				<li>puss in boots3</li>
+				<li>puss in boots4</li>
+				<li>puss in boots5</li>
+            </ul>
+            <ul class="indexList"><!--图片右下角序号部分-->
+				<li class="indexOn">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>	
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="style.js" type="text/javascript"></script>
+</html>
